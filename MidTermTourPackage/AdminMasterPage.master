@@ -1,0 +1,21 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MainMasterPage.master" AutoEventWireup="true" CodeFile="AdminMasterPage.master.cs" Inherits="AdminMasterPage" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <section class="admin-content row ">
+        <div class="col-4">
+             navigation <br />
+ tree view
+            <a href="ListTourPackage.aspx">List Of Tour Package</a>
+        </div>
+        <div class="col-8">
+            <h1 class="text-center text-warning">Admin Content</h1>
+            
+            <asp:ContentPlaceHolder runat="server" ID="adminContent"> </asp:ContentPlaceHolder>
+        </div>
+       
+
+    </section>
+</asp:Content>
+
