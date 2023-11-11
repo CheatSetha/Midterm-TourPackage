@@ -4,9 +4,11 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <section class="user-content">
-       
+
         <div>
-            <asp:ContentPlaceHolder runat="server" ID="userContent"></asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder runat="server" ID="userContent">
+                
+            </asp:ContentPlaceHolder>
         </div>
     </section>
 </asp:Content>

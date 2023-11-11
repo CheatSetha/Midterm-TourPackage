@@ -17,7 +17,19 @@ public partial class AddNew : System.Web.UI.Page
     {
         MembershipUser currentUser = Membership.GetUser();
         uName = currentUser.UserName;
+        if (!IsPostBack)
+        {
+            chkAgr.Checked = false;
+            cmdAdd.Enabled = false;
+        }
 
+    }
+    protected void chkAgr_CheckedChanged(object sender, EventArgs e)
+    {
+        if (chkAgr.Checked == true)
+            cmdAdd.Enabled = true;
+        else
+            cmdAdd.Enabled = false;
     }
 
     protected void cmdAdd_Click(object sender, EventArgs e)
@@ -74,6 +86,22 @@ public partial class AddNew : System.Web.UI.Page
             ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Record added successfully.');", true);
         }
 
+    }
+
+    protected void cmdReset_Click (object sender, EventArgs e)
+    {
+        txtCity.Text = " ";
+        txtCountry.Text = " ";
+        txtPackName.Text = " ";
+        txtDes.Text = " ";
+        txtLink.Text = " ";
+        txtDuration.Text = " ";
+        chkAgr.Checked = false;
+        cmdAdd.Enabled = false;
+    }
+    protected void cmdCancel_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/Default.aspx");
     }
 
 }

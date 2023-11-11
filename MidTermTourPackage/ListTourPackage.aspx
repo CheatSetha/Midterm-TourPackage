@@ -40,7 +40,7 @@
     <asp:SqlDataSource ID="SqlDataSourceTourPackage" runat="server"
         ConnectionString="<%$ ConnectionStrings:aspmidtermConnectionString %>"
         SelectCommand="SELECT * FROM [tblTourPackages]"
-        UpdateCommand = "UPDATE [tblTourPackages] SET [PackageName] = @PackageName, [TourTypeId] = @TourTypeId, [Country] = @Country, [City] = @City, [Duration] = @Duration, [Des] = @Des, [ImgURL] = @ImgURL, [InDate] = @InDate WHERE [PackId] = @PackId"
+        UpdateCommand = "UPDATE [tblTourPackages] SET [PackageName] = @PackageName, [TourTypeId] = @TourTypeId, [Country] = @Country, [City] = @City, [Duration] = @Duration, [Des] = @Des,DesURL  [InDate] = @InDate WHERE [PackId] = @PackId"
 
         DeleteCommand="DELETE FROM [tblTourPackages] WHERE [PackId] = @PackId">
         <UpdateParameters>
